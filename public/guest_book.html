@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>SEUNGA OH</title>
+	</head>
+	<style>
+		#title {
+			margin-top: 50px;
+			text-align: center;
+			font-family: 'Corbel Light', Courier, monospace;
+			font-size: 30px;
+		}
+
+		#write {
+			position: absolute;
+			/* text-align: center; */
+			left: 25%;
+			/* right: 50%; */
+			/* margin-left:auto; 
+			margin-right:auto; */
+		}
+
+		#contents { 
+			position: absolute;
+			width: 700px;
+			height: 150px;
+			background-color: rgba(175, 175, 175, 0.363);
+			border: none;
+			border-radius: 3px;
+			text-align: center;
+		}
+
+		#author {
+			position: absolute;
+			top: 165px;
+			width: 150px;
+			height: 20px;
+			left: 553px;
+			background-color: rgba(175, 175, 175, 0.363);
+			border: none;
+			border-radius: 3px;
+		}
+
+		#save {
+			position: absolute;
+			background-color: rgba(122, 122, 122, 0.363);
+			border: none;
+			border-radius: 3px;
+			top: 205px;
+			left: 330px;
+			width: 50px;
+			height: 30px;
+		}
+
+		#photoInput {
+			top:165px;
+			position: absolute;
+			/* left:px; */
+			/* right: 200px; */
+		}
+
+		/* #read {
+			
+		} */
+
+		#lookbutton {
+			width: 700px;
+			height: 150px;
+			position: absolute;
+			background-color: rgb(253, 138, 61);
+			border: none;
+			border-radius: 3px;
+			left: 25.5%;
+			top: 440px;
+			/* top: 205px;
+			left: 330px; */
+		}
+
+		#logo {
+			position: absolute;
+			font-family: 'Corbel Light', Courier, monospace;
+			text-decoration:none;
+            color: black;
+			top: 30px;
+			left: 30px;
+		}
+	</style>
+	<script>
+		document.frm.submit();
+		var mongoose = require('mongoose');
+		const { Db } = require('mongodb');
+		// public 폴더를 static으로 오픈
+		app.use('/public', static(path.join(__dirname, 'public')));
+	</script>
+<body>
+	<p id=title>guest_book</p>
+	<br>
+
+	<a id=logo href="index.html">SEUNGA OH</a>
+
+	<form method="post" enctype="multipart/form-data" action="/process/guest">
+		<table id=write>
+			<tr>
+				<!-- <td><label>내용</label></td> -->
+				<td><input id=contents name="contents" placeholder="방명록을 남겨보세요."></textarea></td>
+			</tr>
+			<tr>
+				<!-- <td><label>작성자</label></td> -->
+				<td><input id=author type="text" name="author" placeholder="작성자"/></td>
+			</tr>			
+			<tr>
+				<!-- <td><label>사진</label></td> -->
+				<td id=select><input type="file" name="photo" id="photoInput" /><br><img src="" id="photoOutput" width="200px" /></td>
+			</tr>
+			<tr>
+				<td><input id=save type="submit" value="저장" name=""/></td>
+			</tr>
+		</table>
+		<!-- <input type="button" value="닫기" /> -->
+		
+	</form>
+	<form id=read method="post" enctype="multipart/form-data" action="/process/guestlist">
+		<table>
+		</table>
+		<input id=lookbutton type="submit" value="다른 사람이 남긴 방명록을 확인해보세요." name=""/>
+	</form>
+</body>
+</html>

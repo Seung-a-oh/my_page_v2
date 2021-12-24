@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>SEUNGA OH</title>
+	</head>
+	<style>
+		/* html{height: 100%;}
+		body{position: relative; width: 100%;height: 100%;} */
+		#title {
+			margin-top: 50px;
+			text-align: center;
+			font-family: 'Corbel Light', Courier, monospace;
+			font-size: 30px;
+		}
+		#change{
+			position:absolute;
+			width: 400px;
+			height: 250px;
+			background-color: rgba(150, 150, 150, 0.493);
+			text-align: center;
+			/* margin-left: 200px;
+			right: 50%;
+			left: 50%; */
+			/* left: 50%;
+			right: 50%;
+			margin-left:auto; 
+			margin-right:auto; */
+			left: 300px;
+		}
+
+		#signout{
+			position: absolute;
+			width: 400px;
+			height: 250px;
+			background-color: rgba(150, 150, 150, 0.493);
+			text-align: center;
+			/* left: 60%;
+			right: 20%;
+			margin-left:auto; 
+			margin-right:auto; */
+			left: 720px;
+			vertical-align: middle;
+		}
+		/* tr {
+			right: 50%;
+			left: 50%;
+		} */
+		#a {
+			margin-left: 10px;
+			margin-top: 60px;
+			width: 400px;
+		}
+		#b {
+			margin-left: 10px;
+			margin-top: 80px;
+			width: 400px;
+		}
+		#change_button {
+			margin-top: 20px;
+		}
+		#signout_button {
+			margin-top: 20px;
+		}
+		form {
+			top: 180px;
+		}
+
+		#logo {
+			position: absolute;
+			font-family: 'Corbel Light', Courier, monospace;
+			text-decoration:none;
+            color: black;
+			top: 30px;
+			left: 30px;
+		}
+	</style>
+<body>
+	<p id=title>my page</p>
+
+	<a id=logo href="index.html">SEUNGA OH</a>
+
+	<form id=change method="post" action="/process/updateuser">
+		<table id=a>
+            <tr>
+				<td><label>id</label></td>
+				<td><input type="text" name="id"></td>
+			</tr>			
+			<tr>
+				<td><label>origin-password</label></td>
+				<td><input type="password" name="password" ></td>
+			</tr>
+			<tr>
+				<td><label>new-password</label></td>
+				<td><input type="password" name="newpassword" ></td>
+			</tr>
+		</table>
+		<input id=change_button type="submit" value="change password" >
+	</form>
+
+	<form id=signout method="post" action="/process/deleteuser">
+		<table id=b>
+            <tr>
+				<td><label>id</label></td>
+				<td><input type="text" name="id"></td>
+			</tr>			
+			<tr>
+				<td><label>password</label></td>
+				<td><input type="password" name="password" ></td>
+			</tr>
+		</table>
+		<input id=signout_button type="submit" value="withdrawal" >
+	</form>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>SEUNGA OH</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
+	
+		<style>
+			#title {
+				margin-top: 50px;
+				text-align: center;
+				font-family: 'Corbel Light', Courier, monospace;
+				font-size: 30px;
+			}
+
+			#signup {
+				left: 0;
+				right: 0;
+				margin-left:auto; 
+				margin-right:auto;
+				font-family: 'Gowun Batang', serif;
+				text-align: center;
+			}
+
+			#signup_button {
+				/* left: 0;
+				right: 0;
+				margin-left:auto; 
+				margin-right:auto; */
+				/* margin-left: 40px; */
+				/* left: 50%;
+				right:50%; */
+				padding-left: 100px;
+				/* left:100px; */
+			}
+
+			#logo {
+			position: absolute;
+			font-family: 'Corbel Light', Courier, monospace;
+			text-decoration:none;
+            color: black;
+			top: 30px;
+			left: 30px;
+		}
+		</style>
+	</head>
+<body>
+	<p id=title>sign up</p>
+	<br>
+	<a id=logo href="index.html">SEUNGA OH</a>
+	<form method="post" action="/process/adduser">
+		<table id=signup>
+            <tr>
+				<td><label>이름</label></td>
+				<td><input type="text" name="name" ></td>
+			</tr>			
+            <tr>
+				<td><label>닉네임</label></td>
+				<td><input type="text" name="nick" ></td>
+			</tr>
+			<tr>
+				<td><label>아이디</label></td>
+				<td><input type="text" name="id" ></td>
+			</tr>
+			<tr>
+				<td><label>비밀번호</label></td>
+				<td><input type="password" name="password" ></td>
+			</tr>
+			<tr id=signup_button>
+				<td><input type="submit" value="done" ></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
